@@ -2,8 +2,10 @@ name: Build Windows Application
 
 on:
   push:
+    branches:
+      - main  # 推送到main分支时触发
     tags:
-      - 'v*'  # 当推送以v开头的tag时触发
+      - 'v*'  # 推送以v开头的tag时触发
   workflow_dispatch:  # 允许手动触发
     inputs:
       version:
